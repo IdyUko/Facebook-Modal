@@ -1,0 +1,483 @@
+*{
+  margin: 0%;
+  padding: 0%;
+}
+.App{
+  width: 100%;
+  height: auto;
+  /* background-color:  rgb(240,242,245); */
+  background-color: black;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.Header{
+  width: 100%;
+  height: 50px;
+  /* background-color: white; */
+  background-color: black;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  box-shadow: -3px -3px 7px rgba(94, 104, 121, 0.377), 3px 3px 7px rgba(94, 104, 121, 0.377);
+}
+.Header-wrap{
+  width: 98%;
+  height: 50px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.Leftnavs{
+  width: 20%;
+  height: 50px;
+  /* background-color: yellowgreen; */
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.Logo{
+  width: 15%;
+  height: 60px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+}
+.Logoimg{
+  width: 60px;
+  height: 60px;
+}
+.Search-hold{
+  width: 90%;
+  height: 60px;
+  display: flex;
+  justify-content: center;
+  align-items: center; 
+  padding-left: 10px;
+}
+.Search-icon{
+  width: 90%;
+  height: 35px;
+  border-radius: 50px 0 0 50px;
+  background-color: rgb(240,242,245);
+  display: flex;
+  justify-content: center;
+  align-items: center; 
+}
+input{
+  width: 210px;
+  height: 35px;
+  border-radius: 0 50px  50px 0;
+  border: 0;
+  outline: none;
+  background-color: rgb(240,242,245);
+}
+.Midnavs{
+  width: 40%;
+  height: 50px;
+  margin-right: 100px;
+  /* background-color: yellow; */
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  cursor: pointer; 
+}
+.Group{
+  width: 27px;
+  height: 27px;
+  border-radius: 100%;
+  border: 2px solid gray;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: gray;
+}
+.Rightnavs{
+  width: 13%;
+  height: 50px;
+  /* background-color: green; */
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  cursor: pointer; 
+}
+.Menu{
+  width: 38px;
+  height: 38px;
+  border-radius: 100%;
+  background-color: rgb(240,242,245);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.Message{
+  width: 38px;
+  height: 38px;
+  border-radius: 100%;
+  background-color: rgb(240,242,245);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.Notification{
+  width: 38px;
+  height: 38px;
+  border-radius: 100%;
+  background-color: rgb(240,242,245);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.Account{
+  width: 38px;
+  height: 38px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 100%;
+  background-color: gainsboro;
+  margin-left: 10px;
+}
+.Profileimg{
+  width: 38px;
+  height: 38px;
+  border-radius: 100%;
+} 
+.Hero{
+  width: 98%;
+  height: 90vh;
+  margin-top: 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.Left{
+  width: 20%;
+  height: 100%;
+}
+.Mid{
+  width: 45%;
+  height: 100%;
+  /* background-color:  plum; */
+  display: flex;
+  flex-direction: column;
+  align-items: center; 
+}
+.Card1{
+  width: 100%;
+  height: 45%;
+  background-color:  white;
+  border-radius: 10px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center; 
+}
+.Top{
+  width: 100%;
+  height: 20%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-bottom: 1px solid rgb(240,242,245);
+}
+.Topwrap{
+  width: 80%;
+  height: 90%;
+  /* background-color: khaki; */
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  color: gray;  
+}
+.Cardwrap{
+  width: 95%;
+  height: 95%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+    /* background-color: peru; */
+  margin: 5px;
+}
+.Create-story{
+  width: 110px;
+  height: 210px;
+  box-shadow: rgba(0, 0, 0, 0.02) 0px 1px 3px 0px, rgba(27, 31, 35, 0.15) 0px 0px 0px 1px;
+  border-radius: 10px;  
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.Create-story-didy{
+  width: 100%;
+  height: 85%;
+  display: flex;
+  flex-direction: column;
+  align-items: center; 
+  background-image: url(/public/Idy.jpg);
+  background-position: center;
+  background-size: cover;
+  border-radius:  10px 10px 0 0 ;
+}
+.Plus{
+  width: 35px;
+  height: 35px;
+  display: flex;
+  justify-content: center;
+  align-items: center; 
+  cursor: pointer;
+  font-size: 50px;
+  border-radius: 100%;
+  border:  4px solid white;
+  font-size: 20px;
+  position: absolute;
+  top: 275px;
+  background-color: dodgerblue;
+  color: white;
+}
+.Create-story-bottom{
+  width: 100% ;
+  height: 15%;
+  font-size: 13px;
+  color: gray;
+  margin-top: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center; 
+}
+.Create-story-1{
+  width: 110px;
+  height: 210px;
+  box-shadow: rgba(0, 0, 0, 0.02) 0px 1px 3px 0px, rgba(27, 31, 35, 0.15) 0px 0px 0px 1px;
+  border-radius: 10px;  
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-image: url(/public/V.jpg);
+  background-position: center;
+  background-size: cover;
+}
+.Create-story-2{
+  width: 110px;
+  height: 210px;
+  box-shadow: rgba(0, 0, 0, 0.02) 0px 1px 3px 0px, rgba(27, 31, 35, 0.15) 0px 0px 0px 1px;
+  border-radius: 10px;  
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-image: url(/public/G.jpg);
+  background-position: center;
+  background-size: cover;
+}
+.Create-story-3{
+  width: 110px;
+  height: 210px;
+  box-shadow: rgba(0, 0, 0, 0.02) 0px 1px 3px 0px, rgba(27, 31, 35, 0.15) 0px 0px 0px 1px;
+  border-radius: 10px;  
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-image: url(/public/W.jpg);
+  background-position: center;
+  background-size: cover;
+}
+.Create-story-4{
+  width: 110px;
+  height: 210px;
+  box-shadow: rgba(0, 0, 0, 0.02) 0px 1px 3px 0px, rgba(27, 31, 35, 0.15) 0px 0px 0px 1px;
+  border-radius: 10px;  
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-image: url(/public/F.jpg);
+  background-position: center;
+  background-size: cover;
+}
+.Card2{
+  width: 100%;
+  height: 110px;
+  margin-top: 20px;
+  background-color:  white;
+  border-radius: 10px; 
+  display: flex;
+  flex-direction: column;
+}
+.Right{
+  width: 20%;
+  height: 100%;
+}
+.Top-post{
+  width: 100%;
+  height: 50%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 2px solid rgb(240,242,245);
+}
+.Post-button{
+  width: 600px;
+  height: 35px;
+  background-color: rgb(240,242,245);
+  border: 0;
+  outline: none;
+  cursor: pointer;
+  border-radius: 50px;
+  padding-left: 10px;
+  color: gray;
+  display: flex;
+  align-items: center;
+  margin-right: 20px;
+}
+.Icons{
+  width: 100%;
+  height: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+}
+.Iconswrap{
+  width: 80%;
+  height: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.video{
+  width: 22%;
+  height: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.photo{
+  width: 25%;
+  height: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;  
+}
+.smiley{
+  width: 29%;
+  height: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+img{
+  width: 25px;
+  height: 25px;
+}
+
+
+
+.Post-Card{
+  width: 450px;
+  padding: 10px;
+  background-color: white;
+  border-radius: 10px;
+  box-shadow: rgba(0, 0, 0, 0.02) 0px 1px 3px 0px, rgba(27, 31, 35, 0.15);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center; 
+  margin-bottom: 50px;
+  position: absolute;
+}
+.Post-Card-Top{
+  width: 95%;
+  height: 8vh;
+  /* background-color: darkgoldenrod; */
+  display: flex;
+  justify-content: end;
+  align-items: center;
+  border-bottom: 2px solid rgb(240,242,245);
+}
+.Post-Cardwrap-Top{
+  width: 60%;
+  height: 95%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+/* .Close{
+  width: 35px;
+  height: 35px;
+  display: flex;
+  justify-content: center;
+  align-items: center; 
+  cursor: pointer;
+  background-color:  gainsboro;
+  border: 1px solid gainsboro;
+  border-radius: 100%;
+  color: red;
+  font-size: 20px;
+} */
+.Post-Card-Bottom{
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 20px;
+}
+.Post-Cardwrap-Bottom{
+  width: 95%;
+  height: 95%;
+  display: flex;
+  flex-direction: column;
+}
+textarea{
+  border: none;
+  outline: none;
+  font-family: Cambria;
+  font-size: 15px;
+}
+.Image-preview{
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.Preview{
+  width: 100%;
+  box-shadow: -3px -3px 7px rgba(94, 104, 121, 0.377), 3px 3px 7px rgba(94, 104, 121, 0.377);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  border-radius:  10px 10px 0 0 ;
+  border: 1px solid gray;
+}
+.File-preview {
+  width: 95%;
+  height: 35vh;
+  margin: 10px;
+}
+.Choose-file{
+  width: 95%;
+  border: none;
+  outline: none;
+  background-color: transparent
+}
+.Post{
+  width: 100%;
+  height: 10vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.Post-Button{
+  width: 100%;
+  height: 30px;
+  margin-top: 10px;
+  background-color: rgb(27,116,228);
+  border: 1px solid rgb(27,116,228);
+  border-radius: 5px;
+  color: white;
+  font-size: 15px;
+  cursor: pointer;
+}
