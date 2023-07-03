@@ -1,8 +1,10 @@
 import React, { useState } from "react";
 import "./App.css"
 import {AiFillHome, AiOutlineSearch} from "react-icons/ai"
+import {BiVideoPlus} from "react-icons/bi"
 import {BsShop, BsMessenger} from "react-icons/bs"
 import {CgMenuGridO, CgGames} from "react-icons/cg"
+import {FaBookOpen, FaTimes} from "react-icons/fa"
 import {IoIosNotifications} from "react-icons/io"
 import {MdOutlineOndemandVideo, MdGroups} from "react-icons/md"
 
@@ -15,8 +17,21 @@ function App () {
         setModal (!modal)
  }
         const[file, setFile] = useState()
-        function getFile(event) {
-                setFile(URL.createObjectURL(event.target.files[0]))
+
+        function handleChange(e) {
+                console.log(e.target.files)
+                setFile(URL.createObjectURL(e.target.files[0]))
+        }
+
+        const [details, setDetails] = useState([])
+        const [texts, setTexts] = useState([])
+
+        const Post = () => {
+                const Items={
+                        text: texts,
+                        image: file,
+                }
+                setDetails([...details, Items])
         }
 
 
@@ -28,13 +43,13 @@ function App () {
                         <div  className="Leftnavs">
                                 <div className="Logo"><img className="Logoimg" src="/Facebook logo.svg"  alt=""/></div>
                                 <div className="Search-hold"> 
-                                        <div className="Search-icon"><AiOutlineSearch style={{width: 18, height: 15, color: "gray", paddingLeft: 10}} /></div>
+                                        <div className="Search-icon"><AiOutlineSearch style={{width: 18, height: 18, color: "gray"}} /></div>
                                         <div><input  placeholder="Search Facebook"/></div>
                                 </div>
                         </div> 
                 
                         <div className="Midnavs">
-                                <nav><AiFillHome  style= {{width: 25, height: 25, color: "blue"}}/></nav>
+                                <nav><AiFillHome  style= {{width: 25, height: 25, color: "dodgerblue"}}/></nav>
                                 <nav><MdOutlineOndemandVideo  style= {{width: 25, height: 25, color: "gray"}} /></nav>
                                 <nav><BsShop  style= {{width: 25, height: 25, color: "gray"}}/></nav>
                                 <nav className="Group"><MdGroups  style= {{width: 22, height: 22}}/></nav>
@@ -58,9 +73,9 @@ function App () {
                                 <div className="Card1">
                                         <div className="Top">
                                                 < div className="Topwrap">
-                                                        <div>Stories</div>
-                                                        <div>Reels</div>
-                                                        <div>Rooms</div>
+                                                        <div  className="Fa"  style={{display: "flex", alignItems: "center"}}><FaBookOpen  style={{width: 25, height: 25, color: "dodgerblue"}}/>Stories</div>
+                                                        <div className="Fa"  style={{display: "flex", alignItems: "center"}} ><BiVideoPlus  style={{width: 30, height: 30}}/>Reels</div>
+                                                        <div className="Fa"  style={{display: "flex", alignItems: "center"}} ><BiVideoPlus  style={{width: 30, height: 30}} />Rooms</div>
                                                 </div>
                                         </div>
                                         <div className="Cardwrap">
@@ -113,27 +128,63 @@ function App () {
                                 <div className='Post-Card-Top'>  
                                         <div  className="Post-Cardwrap-Top">
                                                 <div  style={{fontWeight:"bold", fontSize:20}}>Create post</div>
-                                                < div className="Account"><img  className="Profileimg" src="/idy.jpg"  alt=""/></div> 
-                                                {/* <button 
-                                                className='Close'
-                                                onClick={toggleModal}
-                                                >X</button> */}
+                                                <button 
+                                                        className='Close'
+                                                        onClick={toggleModal}><FaTimes/>
+                                                </button>
                                         </div>
                                 </div>
                                 <div className= 'Post-Card-Bottom'>
                                 <div className='Post-Cardwrap-Bottom'>
-                                        <textarea placeholder="type text here"> </textarea>
+                                        <textarea placeholder="What's on your mind, Didy?"
+                                        value= {texts}  onChange = {(e) =>{
+                                                setTexts(e.target.value);
+                                        }}> </textarea>
                                         <div className='Image-preview'>
                                                 <div className='Preview'>
                                                         <img  className= "File-preview"  src={file}/>
-                                                        <input  className= "Choose-file" type="file" onChange={getFile}></input>
+                                                        <input  className= "Choose-file" type="file" onChange={handleChange} />
                                                 </div>
                                         </div>
-                                        <div className="Post"><button className='Post-Button' onClick={toggleModal}>Close</button></div>
+                                        <div className="Post"><button className='Post-Button' onClick={Post}>Post</button></div>
                                 </div>
                         </div>
                         </div>
                 ) }
+
+                {details && details.map((props) =>{
+                  return(                                                   
+                        <div className='Display-Post'>
+                                <div className='Display-Post-Top'>
+                                        < div className="Identity">
+                                                <div className="Account"><img  className="Profileimg" src="/idy.jpg"  alt=""/></div>
+                                                <p style={{fontSize: 12}}><b>Didy Bassey Uko</b></p>
+                                        </div>
+                                        <div  className= "Dots"><b>...</b></div>
+                                </div>
+
+                                <div className='Display-Post-Mid' key= {props.id}>
+                                        <p className="Text">{props.text}</p>
+                                        <img  className="Picture" src= {props.image} />
+                                </div>
+
+                                <div className='Display-Post-Bottom'> 
+                                        <div className='Display-Post-Bottom-1'>
+                                                <div className="Wrap-1">
+                                                        <div>Like</div>
+                                                        <div>Comment</div>
+                                                        <div>Share</div>
+                                                </div>
+                                        </div>
+                                        <div className="Line"></div>
+                                        <div className='Display-Post-Bottom-2'>
+                                                < div className="Account"><img  className="Profileimg" src="/idy.jpg"  alt=""/></div> 
+                                                <div className= "Post-comment">Write a comment...</div>  
+                                        </div>
+                                </div>
+                        </div>
+                   )
+                    })}  
         </div>      
     )
 }
